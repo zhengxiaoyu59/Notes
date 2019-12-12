@@ -1,5 +1,5 @@
-MySQL  
 管理MySQL的命令  
+=================  
 >*USE db_name;	//选择数据库  
 *SHOW DATABASES;	//显示所有数据库  
 *SHOW TABLES;	//显示指定数据库的所有数据表  
