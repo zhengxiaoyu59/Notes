@@ -48,5 +48,5 @@ AND (country='CN' OR country='USA');
 ### 语法
 > SELECT column_name,column_name  
 FROM table_name  
-ORDER BY column_name,column_name ASC|DESC;
-
+ORDER BY column_name,column_name ASC|DESC;  
+> * DESC 或者 ASC 只对它紧跟着的第一个列名有效，其他不受影响，仍然是默认的升序
