@@ -50,3 +50,14 @@ AND (country='CN' OR country='USA');
 FROM table_name  
 ORDER BY column_name,column_name ASC|DESC;  
 > * DESC 或者 ASC 只对它紧跟着的第一个列名有效，其他不受影响，仍然是默认的升序
+
+## INSERT INTO 语句
+用于向表中插入新记录
+### 语法
+1.无需指定要插入数据的列名，只提供插入值
+> INSERT INTO table_name  
+VALUES (value1,value2,value3,...);  
+
+2.指定列名及被插入的值  
+> INSERT INTO table_name (column1,column2,column3,...)  
+VALUES (value1,value2,value3,...);  
