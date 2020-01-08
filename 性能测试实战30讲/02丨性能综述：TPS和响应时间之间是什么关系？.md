@@ -4,7 +4,7 @@
 * 稳定性性能场景
 * 异常性能场景
 
-![](https://github.com/zhengxiaoyu59/Notes/blob/master/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%9830%E8%AE%B2/images/021.png?raw=true)  
+![图](https://github.com/zhengxiaoyu59/Notes/blob/master/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%9830%E8%AE%B2/images/021.png?raw=true)  
 * 三条曲线：使用率/用户数（Utilization），吞吐量（Throughput），响应时间（Response Time）  
 * 三个区域：轻负载区（Light Load），重负载区（Heavy Load），塌陷区（Buckle Zone）  
 * 两个点：最优并发用户数（The Optimum Number of Concurrent Users），最大并发用户数（The Maximum Number of Concurrent Users）  
