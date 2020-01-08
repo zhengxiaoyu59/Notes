@@ -1,8 +1,8 @@
-## 性能场景
+性能场景  
 * 基准性能场景
 * 容量性能场景
 * 稳定性性能场景
-* 异常性能场景
+* 异常性能场景  
 
 ![图](https://github.com/zhengxiaoyu59/Notes/blob/master/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%9830%E8%AE%B2/images/021.png?raw=true)  
 * 三条曲线：使用率/用户数（Utilization），吞吐量（Throughput），响应时间（Response Time）  
