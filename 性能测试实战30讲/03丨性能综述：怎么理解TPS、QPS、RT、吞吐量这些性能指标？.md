@@ -11,3 +11,10 @@
 所有技术指标都是在有业务场景的前提下制定的，而技术指标和业务指标之间也要有详细的换算过程。  
 
 ![032](https://github.com/zhengxiaoyu59/Notes/blob/master/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%9830%E8%AE%B2/images/032.jpg?raw=true)  
+
+|简写|英文全称|含义|
+|--|--|--|
+|RT|Response Time|响应时间。包括Request Time和Response Time|
+|HPS|Hits Per Second|每秒点击数|
+|TPS|Transaction Per Second|每秒事务数|
+|QPS|Queries Per Second|在MySQL中指每秒SQL数|
