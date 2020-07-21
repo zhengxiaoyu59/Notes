@@ -19,7 +19,7 @@ MVC 模式是软件工程中的一种软件架构模式，把软件系统分为�
 - 控制器（Controller）：负责转发请求，对请求进行处理。  
 
 用户操作流程图：
-
+![1](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/1.png?raw=true)
  
 #### MTV 模型
 Django 的 MTV 模式本质上和 MVC 是一样的，也是为了各组件间保持松耦合关系，只是定义上有些许不同，分别是指：  
@@ -30,7 +30,7 @@ Django 的 MTV 模式本质上和 MVC 是一样的，也是为了各组件间保
 除了以上三层之外，还需要一个 URL 分发器，它的作用是将一个个 URL 的页面请求分发给不同的 View 处理，View 再调用相应的 Model 和 Template。  
 
 用户操作流程图：
-
+![2](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/2.png?raw=true)
 
  
 用户通过浏览器向服务器发起一个请求(request)，这个请求会去访问视图函数：  
@@ -43,8 +43,9 @@ b.如果涉及数据调用，视图函数调用模型，模型去数据库查找
 
 
 ### 3.2 创建项目
-> 在cmd中，cd到想要创建的文件夹路径，执行`django-admin startproject [projectname]`
+> 在cmd中，cd到想要创建的文件夹路径，执行`django-admin startproject [projectname]`  
 
+![3](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/3.png?raw=true)
  
 目录说明
 - zxyautotest: 项目的容器。  
@@ -56,13 +57,16 @@ b.如果涉及数据调用，视图函数调用模型，模型去数据库查找
 - HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。  
 
 ### 3.3 启动服务
-> `cd [projectname]`进入项目，输入命令`python manage.py runserver`
+> `cd [projectname]`进入项目，输入命令`python manage.py runserver`  
+
+![4](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/4.png?raw=true)
 
 默认端口8000，改动端口使用python manage.py runserver 127.0.0.1:[端口号]（不可跨域）  
 或者python manage.py runserver 0.0.0.0:[端口号]（代表任何IP都可访问）  
+![5](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/5.png?raw=true)
 
-在浏览器中输入本机IP地址：127.0.0.1:8000，见到下图即正常启动。
-
+在浏览器中输入本机IP地址：127.0.0.1:8000，见到下图即正常启动。  
+![5.1](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/5.1.jpg?raw=true)
  
 
 ### 3.4 构建Django后端
@@ -70,41 +74,49 @@ b.如果涉及数据调用，视图函数调用模型，模型去数据库查找
 另启一个cmd，进入工程所在目录，  
 使用`python manage.py makemigrations`创建model  
 使用`python manage.py migrate`创建数据表  
-
+![6](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/6.png?raw=true)
 
 #### 2. 创建admin（登录后端用）
 `python manage.py createsuperuser`，输入账号、邮箱、密码，创建超管账号  
+![7](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/7.png?raw=true)
 
 
 #### 3. 登录Django后端
 在浏览器中输入 http://127.0.0.1:8000/admin 访问后端，使用刚创建的账号登录  
-
+![8](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/8.png?raw=true)
 
 #### 4. 汉化Django后端
-在setting.py文件中，切换为中文和时区  
-
+在setting.py文件中，切换中文和时区  
+```python
+LANGUAGE_CODE = 'zh-Hans'
+TIME_ZONE = 'Asia/Shanghai'
+```
+![9](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/9.png?raw=true)
 
 ### 3.5 创建应用
 执行`python manage.py startapp apitest`，在工程目录下创建apitest文件夹及文件  
 
-
 在setting.py 中加入"apitest"，将apitest应用添加到项目中  
-
+![10](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/10.png?raw=true)
 
 ### 3.6 创建视图
-
+![11](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/11.png?raw=true)
 
 ### 3.7 创建映射
 在url.py中创建关联映射  
-
+![12](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/12.png?raw=true)  
+![13](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/13.png?raw=true)
 
 ### 3.8 创建模板
 在apitest下创建templates文件夹，创建login.html  
+![14](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/14.png?raw=true)
 
 在url.py中创建关联映射  
+![15](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/15.png?raw=true)
 
 在views.py中创建login函数  
-
+![16](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/16.png?raw=true)  
+![17](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/17.png?raw=true)
  
  
 ## 4. MySQL数据库使用
@@ -137,7 +149,7 @@ pymysql.install_as_MySQLdb()
 
 
 在Navicat中创建数据库  
-
+![18](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/18.png?raw=true)
 
 #### 安装PyMySQL
 执行`pip3 install PyMySQL`  
@@ -147,7 +159,10 @@ pymysql.install_as_MySQLdb()
 pymysql.version_info = (1, 3, 13, "final", 0)
 pymysql.install_as_MySQLdb()
 ```
+![19](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/19.png?raw=true)
  
 #### 迁移同步数据库和表结构
 `python manage.py makemigrations`  
-`python manage.py migrate`
+`python manage.py migrate`  
+![20](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/20.png?raw=true)  
+![21](https://github.com/zhengxiaoyu59/Notes/blob/master/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%EF%BC%9APYTHON%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/images/Chapter1&2/21.png?raw=true)
